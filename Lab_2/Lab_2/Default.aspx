@@ -8,10 +8,37 @@
 <body>
 <form id="form1"  runat="server">
     <div>
-        <asp:Button ID="Button1" runat="server" OnClick="OnButtonClickGet" Text="Get" />
-        <asp:Button ID="Button2" runat="server" OnClick="OnButtonClickOpt" Text="Options" />
-        <asp:Button ID="Button3" runat="server" OnClick="OnButtonClickPost" Text="Post" />
+        <asp:Button ID="GetButton" runat="server" OnClick="OnButtonClickGet" Text="Get" />
+        <asp:Button ID="PostButton" runat="server" OnClick="OnButtonClickPost" Text="Post" />
+        <asp:Button ID="PutButton" runat="server" OnClick="OnButtonClickPut" Text="Put" />
+        <asp:Button ID="HeadButton" runat="server" OnClick="OnButtonClickHead" Text="Head"/>
         <br/>
+        <div>
+            <a href="Math.aspx">Math page</a>
+            <p>
+                Элемент HtmlInputText
+                <input id="InputText"  type="text" runat="server" />
+            </p>
+            <p>
+                CheckBox
+                <input id="CheckBox" type="checkbox" runat="server" />
+            </p>
+            <p>
+                Элемент HtmlInputRadioButton
+                <input id="Radio1" type="radio" runat="server" />
+                <input id="Radio2" type="radio" runat="server" />
+            </p> 
+            <p>
+                Элемент HtmlInputSubmit
+                <input id="SubmitButton" type="submit" value="Submit" runat="server" />
+            </p>
+
+            <br />
+            <br />
+            <br />
+            <br />
+            <asp:Label runat="server" ID="LabelResult" />
+        </div>
         <br/>
         <asp:Label ID="Label" runat="server"></asp:Label>
     </div>

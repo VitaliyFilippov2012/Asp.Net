@@ -68,12 +68,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Default.aspx" />
+    <Content Include="Math.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Handlers\GetHandler.cs" />
     <Compile Include="Handlers\Handler.cs" />
-    <Compile Include="Handlers\OptionsHandler.cs" />
     <Compile Include="Handlers\PostHandler.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -81,6 +81,15 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\PostMathHandler.cs" />
+    <Compile Include="Handlers\PutHandler.cs" />
+    <Compile Include="Math.aspx.cs">
+      <DependentUpon>Math.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Math.aspx.designer.cs">
+      <DependentUpon>Math.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
