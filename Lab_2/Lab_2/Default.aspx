@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Home Page" Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Lab_2.Default" %>
+﻿<%@ Page Title="Home Page" Async="true"  Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Lab_2.Default" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www/w3/org/1999/xhtml">
 
 <html xmlns="http://www/w3/org/1999/xhtml">

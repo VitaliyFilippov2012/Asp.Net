@@ -16,20 +16,13 @@ namespace Lab_2
 
         }
 
-        protected void OnButtonClickGet(object sender, EventArgs e)
+        protected async void OnButtonClickGet(object sender, EventArgs e)
         {
-            var rq = (HttpWebRequest) WebRequest.Create("http://localhost:55444/get.fvl?ParmA=Vitaliy&ParmB=Filippov");
+            var rq = (HttpWebRequest) WebRequest.Create("http://localhost:55444/get.fvl?ParmA=Kolya&ParmB=Actan");
             rq.Method = "GET";
-            byte[] parameters = System.Text.Encoding.UTF8.GetBytes("ParmA=First&ParmB=Second");
-            rq.ContentLength = parameters.Length;
-            rq.ContentType = "application/x-www-form-urlencoded";
-            var dataStream = rq.GetRequestStream();
-            dataStream.Write(parameters, 0, parameters.Length);
-            dataStream.Close();
-
-            HttpWebResponse response = (HttpWebResponse)rq.GetResponse();
+            var response = (HttpWebResponse) await rq.GetResponseAsync();
             StreamReader reader = new StreamReader(response.GetResponseStream());
-            LabelResult.Text = reader.ReadToEnd();
+            Response.Write(reader.ReadToEnd());
         }
 
         protected void OnButtonClickPut(object sender, EventArgs e)
@@ -71,7 +64,7 @@ namespace Lab_2
 
         protected void OnButtonClickPost(object sender, EventArgs e)
         {
-            var rq = (HttpWebRequest)WebRequest.Create("http://localhost:55444/sum.math");
+            var rq = (HttpWebRequest)WebRequest.Create("http://localhost:44375/sum.math");
             rq.Method = "POST";
             rq.MaximumResponseHeadersLength = 100;
             rq.ContentLength = 0;
