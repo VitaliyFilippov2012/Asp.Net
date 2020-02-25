@@ -22,10 +22,10 @@ namespace Lab_2
             rq.Method = "GET";
             var response = (HttpWebResponse) await rq.GetResponseAsync();
             StreamReader reader = new StreamReader(response.GetResponseStream());
-            LabelResult.Text = reader.ReadToEnd();
+            LabelResult.Text = await reader.ReadToEndAsync();
         }
 
-        protected void OnButtonClickPost(object sender, EventArgs e)
+        protected async void OnButtonClickPost(object sender, EventArgs e)
         {
             var rq = (HttpWebRequest)WebRequest.Create("http://localhost:55444/post.fvl");
             rq.Method = "POST";
@@ -38,20 +38,20 @@ namespace Lab_2
             dataStream.Write(parameters, 0, parameters.Length);
             dataStream.Close();
 
-            HttpWebResponse response = (HttpWebResponse)rq.GetResponse();
+            HttpWebResponse response = (HttpWebResponse) await rq.GetResponseAsync();
             StreamReader reader = new StreamReader(response.GetResponseStream());
-            LabelResult.Text = reader.ReadToEnd();
+            LabelResult.Text = await reader.ReadToEndAsync();
         }
 
-        protected void OnButtonClickHead(object sender, EventArgs e)
+        protected async void OnButtonClickHead(object sender, EventArgs e)
         { 
             try
             {
                 HttpWebRequest request = (HttpWebRequest)HttpWebRequest.Create("http://localhost:55444/sum.math");
                 request.Method = "HEAD";
-                HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+                HttpWebResponse response = (HttpWebResponse) await request.GetResponseAsync();
                 StreamReader reader = new StreamReader(response.GetResponseStream());
-                LabelResult.Text = reader.ReadToEnd();
+                LabelResult.Text = await reader.ReadToEndAsync();
             }
             catch (WebException exception)
             {
@@ -62,19 +62,19 @@ namespace Lab_2
             }
         }
 
-        protected void OnButtonClickPut(object sender, EventArgs e)
+        protected async void OnButtonClickPut(object sender, EventArgs e)
         {
             var rq = (HttpWebRequest)WebRequest.Create("http://localhost:55444/sum.math");
             rq.Method = "PUT";
             rq.MaximumResponseHeadersLength = 100;
             rq.ContentLength = 0;
-            WriteResponse((HttpWebResponse)rq.GetResponse());
+            WriteResponse((HttpWebResponse)await rq.GetResponseAsync());
         }
 
-        private void WriteResponse(HttpWebResponse rs)
+        private async void WriteResponse(HttpWebResponse rs)
         {
             var rdr = new StreamReader(rs.GetResponseStream());
-            Response.Write(rdr.ReadToEnd());
+            Response.Write( await rdr.ReadToEndAsync());
         }
     }
 }
