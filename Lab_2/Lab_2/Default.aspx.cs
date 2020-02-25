@@ -22,13 +22,13 @@ namespace Lab_2
             rq.Method = "GET";
             var response = (HttpWebResponse) await rq.GetResponseAsync();
             StreamReader reader = new StreamReader(response.GetResponseStream());
-            Response.Write(reader.ReadToEnd());
+            LabelResult.Text = reader.ReadToEnd();
         }
 
-        protected void OnButtonClickPut(object sender, EventArgs e)
+        protected void OnButtonClickPost(object sender, EventArgs e)
         {
-            var rq = (HttpWebRequest)WebRequest.Create("http://localhost:55444/put.fvl");
-            rq.Method = "PUT";
+            var rq = (HttpWebRequest)WebRequest.Create("http://localhost:55444/post.fvl");
+            rq.Method = "POST";
             rq.MaximumResponseHeadersLength = 100;
             rq.ContentLength = 0; 
             byte[] parameters = System.Text.Encoding.UTF8.GetBytes("ParmA=Cat&ParmB=Dog");
@@ -62,10 +62,10 @@ namespace Lab_2
             }
         }
 
-        protected void OnButtonClickPost(object sender, EventArgs e)
+        protected void OnButtonClickPut(object sender, EventArgs e)
         {
-            var rq = (HttpWebRequest)WebRequest.Create("http://localhost:44375/sum.math");
-            rq.Method = "POST";
+            var rq = (HttpWebRequest)WebRequest.Create("http://localhost:55444/sum.math");
+            rq.Method = "PUT";
             rq.MaximumResponseHeadersLength = 100;
             rq.ContentLength = 0;
             WriteResponse((HttpWebResponse)rq.GetResponse());
