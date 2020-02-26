@@ -30,8 +30,7 @@ namespace Lab_2
             var rq = (HttpWebRequest)WebRequest.Create("http://localhost:55444/post.fvl");
             rq.Method = "POST";
             rq.MaximumResponseHeadersLength = 100;
-            rq.ContentLength = 0; 
-            var parameters = System.Text.Encoding.UTF8.GetBytes("ParmA=Cat&ParmB=Dog");
+            var parameters = System.Text.Encoding.ASCII.GetBytes("ParmA=Cat&ParmB=Dog");
             rq.ContentLength = parameters.Length;
             rq.ContentType = "application/x-www-form-urlencoded";
             var dataStream = rq.GetRequestStream();
@@ -66,13 +65,14 @@ namespace Lab_2
         {
             var rq = (HttpWebRequest) WebRequest.Create("http://localhost:55444/put.fvl");
             rq.Method = "PUT";
-
+            rq.MaximumResponseHeadersLength = 100;
             var parameters = System.Text.Encoding.ASCII.GetBytes("ParmA=Young&ParmB=Vitali");
             rq.ContentLength = parameters.Length;
             rq.ContentType = "application/x-www-form-urlencoded";
             var dataStream = rq.GetRequestStream();
             dataStream.Write(parameters, 0, parameters.Length);
             dataStream.Close();
+
             var response = (HttpWebResponse) await rq.GetResponseAsync();
             var reader = new StreamReader(response.GetResponseStream());
             Label.Text = await reader.ReadToEndAsync();
