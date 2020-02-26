@@ -14,7 +14,7 @@
             var postData = "x=" + x + "&y=" + y;
 
             xmlHttp.onreadystatechange = function () {
-                if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+                if (xmlHttp.readyState === 4 && xmlHttp.status === 200) {
                     resultTextBox.value = xmlHttp.responseText;
                 }
             }

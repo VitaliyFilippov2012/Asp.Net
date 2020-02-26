@@ -22,7 +22,7 @@ namespace Lab_2
             rq.Method = "GET";
             var response = (HttpWebResponse) await rq.GetResponseAsync();
             var reader = new StreamReader(response.GetResponseStream());
-            LabelResult.Text = await reader.ReadToEndAsync();
+            Label.Text = await reader.ReadToEndAsync();
         }
 
         protected async void OnButtonClickPost(object sender, EventArgs e)
@@ -40,31 +40,31 @@ namespace Lab_2
 
             var response = (HttpWebResponse) await rq.GetResponseAsync();
             var reader = new StreamReader(response.GetResponseStream());
-            LabelResult.Text = await reader.ReadToEndAsync();
+            Label.Text = await reader.ReadToEndAsync();
         }
 
         protected async void OnButtonClickHead(object sender, EventArgs e)
         { 
             try
             {
-                var request = (HttpWebRequest)HttpWebRequest.Create("http://localhost:55444/sum.math");
+                var request = (HttpWebRequest)HttpWebRequest.Create("http://localhost:55444/post.fvl");
                 request.Method = "HEAD";
                 var response = (HttpWebResponse) await request.GetResponseAsync();
                 var reader = new StreamReader(response.GetResponseStream());
-                LabelResult.Text = await reader.ReadToEndAsync();
+                Label.Text = await reader.ReadToEndAsync();
             }
             catch (WebException exception)
             {
-                LabelResult.Text = exception.Status.ToString();
-                LabelResult.Text += "<br />" + exception.Message;
-                LabelResult.Text += "<br />" + exception.TargetSite;
-                LabelResult.Text += "<br />" + exception.Source;
+                Label.Text = exception.Status.ToString();
+                Label.Text += "<br />" + exception.Message;
+                Label.Text += "<br />" + exception.TargetSite;
+                Label.Text += "<br />" + exception.Source;
             }
         }
 
         protected async void OnButtonClickPut(object sender, EventArgs e)
         {
-            var rq = (HttpWebRequest)WebRequest.Create("http://localhost:55444/put.fvl");
+            var rq = (HttpWebRequest) WebRequest.Create("http://localhost:55444/put.fvl");
             rq.Method = "PUT";
 
             var parameters = System.Text.Encoding.ASCII.GetBytes("ParmA=Young&ParmB=Vitali");
@@ -75,13 +75,7 @@ namespace Lab_2
             dataStream.Close();
             var response = (HttpWebResponse) await rq.GetResponseAsync();
             var reader = new StreamReader(response.GetResponseStream());
-            LabelResult.Text = await reader.ReadToEndAsync();
-        }
-
-        private async void WriteResponse(HttpWebResponse rs)
-        {
-            var rdr = new StreamReader(rs.GetResponseStream());
-            Response.Write( await rdr.ReadToEndAsync());
+            Label.Text = await reader.ReadToEndAsync();
         }
     }
 }

@@ -69,7 +69,9 @@
   <ItemGroup>
     <Content Include="Default.aspx" />
     <Content Include="Math.aspx" />
+    <Content Include="web-sockets.js" />
     <Content Include="Web.config" />
+    <Content Include="WebSocketPage.html" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Handlers\GetHandler.cs" />
@@ -84,6 +86,7 @@
     </Compile>
     <Compile Include="Handlers\PostMathHandler.cs" />
     <Compile Include="Handlers\PutHandler.cs" />
+    <Compile Include="Handlers\WebSocketHandler.cs" />
     <Compile Include="Math.aspx.cs">
       <DependentUpon>Math.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
