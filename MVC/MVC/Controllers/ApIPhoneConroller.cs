@@ -15,13 +15,12 @@ namespace MVC.Controllers
     {
         private SampleContext db = new SampleContext();
 
-        // GET: api/ApiPerson
         public IQueryable<Contact> GetPersons()
         {
             return db.Contacts;
         }
 
-        // GET: api/ApiPerson/5
+
         [ResponseType(typeof(Contact))]
         public async Task<IHttpActionResult> GetContactsAsync(string id)
         {
@@ -34,7 +33,6 @@ namespace MVC.Controllers
             return Ok(contact);
         }
 
-        // PUT: api/ApiPerson/5
         [ResponseType(typeof(void))]
         public async Task<IHttpActionResult> PutContactAsync(string id, Contact contact)
         {
@@ -67,7 +65,7 @@ namespace MVC.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/ApiPerson
+
         [ResponseType(typeof(Contact))]
         public async Task<IHttpActionResult> PostContactAsync(Contact contact)
         {
@@ -95,7 +93,7 @@ namespace MVC.Controllers
             return CreatedAtRoute("DefaultApi", new { id = contact.Phone }, contact);
         }
 
-        // DELETE: api/ApiPerson/5
+
         [ResponseType(typeof(Contact))]
         public async Task<IHttpActionResult> DeleteContactAsync(string id)
         {

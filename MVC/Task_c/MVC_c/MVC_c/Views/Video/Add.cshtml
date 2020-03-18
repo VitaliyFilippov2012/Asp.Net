@@ -1,0 +1,21 @@
+﻿@model MVC_c.Models.Video
+
+@{
+    Layout = "Layout.cshtml";
+}
+
+@section LIST
+{
+    @using (Html.BeginForm("Upload", "Video", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <input type="file" name="upload" />
+        <br>
+        <input type="submit" class="btn btn-success" value="Загрузить" />
+    }
+
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+}
+@section VIDEO
+{}

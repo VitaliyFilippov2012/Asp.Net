@@ -1,0 +1,21 @@
+﻿@{
+    Layout = "Layout.cshtml";
+}
+@section LIST
+{
+
+    @foreach (var item in ViewBag.Catalogs)
+    {
+        <tr>
+            <td>
+                <a target="video_frame" href='@Url.Action("GetVideo")?name=@item'>@item</a>
+            </td>
+        </tr>
+    }
+
+    @Html.ActionLink("Add New Video", "Add")
+
+}
+@section VIDEO{
+    <iframe name="video_frame" style="width:100%;height:100%" />
+}
