@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "Update";
+    Layout = null;
+}
+@foreach (var item in ViewBag.PhoneBooks)
+{
+    if (item.Id == Convert.ToInt32(ViewBag.Id))
+    {
+        <form method="post" action="~/Dict/UpdateSave">
+            <input type="hidden" id="id" name="id" value="@ViewBag.Id"/>
+            <input type="text" id="surname" name="surname" value="@item.Surname" />
+            <input type="text" id="telephone" name="telephone" value="@item.TelephoneNumber" />
+            <input type="submit" value="Save" />
+        </form>
+    }
+}
+
+
+
