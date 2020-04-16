@@ -44,7 +44,7 @@ namespace lab_3.Models
 
         public void Add(string surname, string telephone)
         {
-            var phoneBook = new PhoneBook() {Id = new Guid(), Surname = surname, TelephoneNumber = telephone };
+            var phoneBook = new PhoneBook() {Id = Guid.NewGuid(), Surname = surname, TelephoneNumber = telephone };
             PhoneBooks.Add(phoneBook);
             Save();
         }
