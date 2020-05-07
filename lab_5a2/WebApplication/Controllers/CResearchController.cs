@@ -7,11 +7,9 @@ namespace WebApplication.Controllers
     public class CResearchController : Controller
     {
         [AcceptVerbs("GET", "POST")]
-        public ActionResult C01(string data)
+        public ActionResult C01()
         {
-            RouteData r = this.RouteData;
-            RouteValueDictionary rd = this.RouteData.Values;
-            ViewBag.Rd = rd;
+            ViewBag.Rd = this.RouteData.Values;
 
             return View();
         }
@@ -19,9 +17,8 @@ namespace WebApplication.Controllers
         [AcceptVerbs("GET", "POST")]
         public ActionResult C02()
         {
-            RouteData r = this.RouteData;
-            RouteValueDictionary rd = this.RouteData.Values;
-            StringBuilder response = new StringBuilder();
+            var rd = this.RouteData.Values;
+            var response = new StringBuilder();
             foreach (string key in Request.Headers)
             {
                 var value = Request.Headers[key];
@@ -29,7 +26,7 @@ namespace WebApplication.Controllers
             }
             response.AppendLine("RawURI - " + Request.RawUrl + "<br />");
             response.AppendLine("Status - " + Response.Status+ "<br />");
-            response.AppendLine("Body (form) - " + Request. + "<br />");
+            response.AppendLine("Body (form) - " + Request.Form + "<br />");
             Response.Write(response.ToString());
             ViewBag.Rd = rd;
             return View();

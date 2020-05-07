@@ -1,0 +1,394 @@
+{
+	"info": {
+		"_postman_id": "5d31aec7-1500-42d2-9c5c-5e425a286721",
+		"name": "lab5a",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetM01_1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{env-name}}/MResearch/M01/1",
+					"host": [
+						"{{env-name}}"
+					],
+					"path": [
+						"MResearch",
+						"M01",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetM01_2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{env-name}}/MResearch/M01",
+					"host": [
+						"{{env-name}}"
+					],
+					"path": [
+						"MResearch",
+						"M01"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetM01_3",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{env-name}}/MResearch",
+					"host": [
+						"{{env-name}}"
+					],
+					"path": [
+						"MResearch"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetM01_4",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{env-name}}/",
+					"host": [
+						"{{env-name}}"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetM01_5",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{env-name}}/V2/MResearch/M01",
+					"host": [
+						"{{env-name}}"
+					],
+					"path": [
+						"V2",
+						"MResearch",
+						"M01"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetM02_1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{env-name}}/V2",
+					"host": [
+						"{{env-name}}"
+					],
+					"path": [
+						"V2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetM02_2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{env-name}}/V2/MResearch",
+					"host": [
+						"{{env-name}}"
+					],
+					"path": [
+						"V2",
+						"MResearch"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetM02_3",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{env-name}}/V2/MResearch/M02",
+					"host": [
+						"{{env-name}}"
+					],
+					"path": [
+						"V2",
+						"MResearch",
+						"M02"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetM02_4",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{env-name}}/MResearch/M02",
+					"host": [
+						"{{env-name}}"
+					],
+					"path": [
+						"MResearch",
+						"M02"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetM02_5",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{env-name}}/V3/MResearch/X/M02",
+					"host": [
+						"{{env-name}}"
+					],
+					"path": [
+						"V3",
+						"MResearch",
+						"X",
+						"M02"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetM03_1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{env-name}}/V3",
+					"host": [
+						"{{env-name}}"
+					],
+					"path": [
+						"V3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetM03_2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{env-name}}/V3/MResearch/X",
+					"host": [
+						"{{env-name}}"
+					],
+					"path": [
+						"V3",
+						"MResearch",
+						"X"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetM03_3",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{env-name}}/V3/MResearch/X/M03",
+					"host": [
+						"{{env-name}}"
+					],
+					"path": [
+						"V3",
+						"MResearch",
+						"X",
+						"M03"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetMXX",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{env-name}}/V2/MResearch",
+					"host": [
+						"{{env-name}}"
+					],
+					"path": [
+						"V2",
+						"MResearch"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetMXX",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{env-name}}/V",
+					"host": [
+						"{{env-name}}"
+					],
+					"path": [
+						"V"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetM01_6",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{env-name}}/V3/MResearch/X/M01",
+					"host": [
+						"{{env-name}}"
+					],
+					"path": [
+						"V3",
+						"MResearch",
+						"X",
+						"M01"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "C01_1",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/html",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<h2>dfgfdgfdgdfg<h2>",
+					"options": {
+						"raw": {
+							"language": "html"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:23336/CResearch/C01",
+					"host": [
+						"localhost"
+					],
+					"port": "23336",
+					"path": [
+						"CResearch",
+						"C01"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "C02",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/html",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:23336/CResearch/C02",
+					"host": [
+						"localhost"
+					],
+					"port": "23336",
+					"path": [
+						"CResearch",
+						"C02"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "C01_2",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/html",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<h2>dfgfdgfdgdfg<h2>"
+				},
+				"url": {
+					"raw": "localhost:23336/CResearch/C02",
+					"host": [
+						"localhost"
+					],
+					"port": "23336",
+					"path": [
+						"CResearch",
+						"C02"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
