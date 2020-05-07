@@ -19,7 +19,7 @@ namespace WindowsFormsApp
 
         private void SendRequestButton_Click(object sender, EventArgs e)
         {
-            var request = (HttpWebRequest)HttpWebRequest.Create("http://localhost:23331/sum.fvl");
+            var request = (HttpWebRequest)WebRequest.Create("http://localhost:23331/sum.fvl");
             request.Method = "POST";
 
             byte[] parameters = System.Text.Encoding.UTF8.GetBytes($"Y={textBox1.Text}&X={textBox2.Text}");

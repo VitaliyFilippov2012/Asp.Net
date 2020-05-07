@@ -1,0 +1,27 @@
+﻿@using System.Web.Routing;
+@{
+    ViewBag.Title = "C01";
+    RouteValueDictionary rd = ViewBag.rd;
+    Dictionary<string, object>.Enumerator ir = rd.GetEnumerator();
+}
+
+<h2>C01</h2>
+<div style="font-size: 25px;">
+    <p>
+        @while (ir.MoveNext())
+        {
+            @ir.Current.Key @:= @ir.Current.Value.ToString() <br />
+        }
+    </p>
+    method: <strong>@Request.HttpMethod</strong><br /><br />
+    queryString: <strong>@Request.QueryString</strong><br /><br />
+    rawUrl: <strong>@Request.RawUrl</strong><br /><br />
+    URI: <strong>@Request.Url.AbsoluteUri</strong><br /><br />
+    headers: <strong>@Request.Headers</strong><br /><br />
+    @if (@Request.HttpMethod == "POST")
+    {
+        <strong>body: @Request.Form</strong>
+    }
+
+
+</div>
