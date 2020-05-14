@@ -18,11 +18,13 @@
     rawUrl: <strong>@Request.RawUrl</strong><br /><br />
     URI: <strong>@Request.Url.AbsoluteUri</strong><br /><br />
     headers: <strong>@Request.Headers</strong><br /><br />
-    @if (@Request.HttpMethod == "POST")
+    @if (@Request.HttpMethod.ToString() == "POST")
     {
+        <p>body:</p>
+
         foreach (string s in Request.Form)
         {
-            <strong>body:@Server.HtmlEncode(s)</strong>
+            <strong>@Server.HtmlEncode(s)</strong><br />
         }
     }
 

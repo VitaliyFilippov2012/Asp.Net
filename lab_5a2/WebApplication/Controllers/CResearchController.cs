@@ -1,6 +1,5 @@
 ﻿using System.Text;
 using System.Web.Mvc;
-using System.Web.Routing;
 
 namespace WebApplication.Controllers
 {
@@ -25,7 +24,7 @@ namespace WebApplication.Controllers
                 response.AppendLine(value + "<br />");
             }
             response.AppendLine("RawURI - " + Request.RawUrl + "<br />");
-            response.AppendLine("Status - " + Response.Status+ "<br />");
+            response.AppendLine("Status - " + Response.Status + "<br />");
             response.AppendLine("Body (form) - " + Request.Form + "<br />");
             Response.Write(response.ToString());
             ViewBag.Rd = rd;
