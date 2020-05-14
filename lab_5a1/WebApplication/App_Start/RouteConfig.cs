@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Policy;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
@@ -38,26 +39,32 @@ namespace WebApplication
            );
 
             routes.MapRoute(
-               name: "M-5",
+                name: "M-5",
+                url: "V2/{controller}/{action}",
+                defaults: new { controller = "MResearch", action = "M02" }
+            );
+
+            routes.MapRoute(
+               name: "M-6",
                url: "V3/{controller}/{id}",
                defaults: new { controller = "MResearch", action = "M03", id = UrlParameter.Optional }
             );
 
             routes.MapRoute(
-               name: "M-6",
+               name: "M-7",
                url: "V3/{controller}/{id}/{action}",
                defaults: new { controller = "MResearch", id = UrlParameter.Optional }
             );
 
             routes.MapRoute(
-               name: "M-7",
+               name: "M-8",
                url: "{controller}/{action}/{id}",
                defaults: new { id = UrlParameter.Optional }
            );
 
             routes.MapRoute(
                 name: "M",
-                url: "",    
+                url: "",
                 defaults: new { controller = "MResearch", action = "M01", id = UrlParameter.Optional }
             );
         }

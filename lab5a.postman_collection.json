@@ -249,13 +249,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{env-name}}/V2/MResearch",
+					"raw": "{{env-name}}/V2/M",
 					"host": [
 						"{{env-name}}"
 					],
 					"path": [
 						"V2",
-						"MResearch"
+						"M"
 					]
 				}
 			},
@@ -293,97 +293,6 @@
 						"MResearch",
 						"X",
 						"M01"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "C01_1",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "text/html",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "<h2>dfgfdgfdgdfg<h2>",
-					"options": {
-						"raw": {
-							"language": "html"
-						}
-					}
-				},
-				"url": {
-					"raw": "localhost:23336/CResearch/C01",
-					"host": [
-						"localhost"
-					],
-					"port": "23336",
-					"path": [
-						"CResearch",
-						"C01"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "C02",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "text/html",
-						"type": "text"
-					}
-				],
-				"url": {
-					"raw": "localhost:23336/CResearch/C02",
-					"host": [
-						"localhost"
-					],
-					"port": "23336",
-					"path": [
-						"CResearch",
-						"C02"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "C01_2",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "text/html",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "<h2>dfgfdgfdgdfg<h2>"
-				},
-				"url": {
-					"raw": "localhost:23336/CResearch/C02",
-					"host": [
-						"localhost"
-					],
-					"port": "23336",
-					"path": [
-						"CResearch",
-						"C02"
 					]
 				}
 			},
