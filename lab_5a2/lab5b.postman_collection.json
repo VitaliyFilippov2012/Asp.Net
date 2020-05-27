@@ -1,0 +1,296 @@
+{
+	"info": {
+		"_postman_id": "88bdb68f-870a-4d98-81f2-ae0fa542bcc5",
+		"name": "lab5b",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET:M01B",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5004/it/89/fgdfjhfgfd",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5004",
+					"path": [
+						"it",
+						"89",
+						"fgdfjhfgfd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET:M02",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5004/it/true/fgdf",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5004",
+					"path": [
+						"it",
+						"true",
+						"fgdf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST:M02",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5004/it/false/fgdf",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5004",
+					"path": [
+						"it",
+						"false",
+						"fgdf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET:M03",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5004/it/675/fgd",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5004",
+					"path": [
+						"it",
+						"675",
+						"fgd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE:M03",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5004/it/675/fgd",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5004",
+					"path": [
+						"it",
+						"675",
+						"fgd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT:M04",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5004/it/fgd/100",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5004",
+					"path": [
+						"it",
+						"fgd",
+						"100"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST:M04",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5004/it/vitali.filippov2012@mail.ru",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5004",
+					"path": [
+						"it",
+						"vitali.filippov2012@mail.ru"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Фильтр акции АА",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5001/AResearch/AA",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"AResearch",
+						"AA"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Фильтр результата AK",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5001/AResearch/AK",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"AResearch",
+						"AK"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Фильтр исключения AE",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5001/AResearch/AE",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"AResearch",
+						"AE"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CHResearch:AD-5sec",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5003/CHResearch/AD",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5003",
+					"path": [
+						"CHResearch",
+						"AD"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CHResearch:AP-7sec",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5003/CHResearch/AP?x=3&y=77",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5003",
+					"path": [
+						"CHResearch",
+						"AP"
+					],
+					"query": [
+						{
+							"key": "x",
+							"value": "3"
+						},
+						{
+							"key": "y",
+							"value": "77"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CHResearch:AP-7sec Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5003/CHResearch/AP?x=3&y=55",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5003",
+					"path": [
+						"CHResearch",
+						"AP"
+					],
+					"query": [
+						{
+							"key": "x",
+							"value": "3"
+						},
+						{
+							"key": "y",
+							"value": "55"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
