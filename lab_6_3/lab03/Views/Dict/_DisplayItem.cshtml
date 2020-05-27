@@ -1,0 +1,11 @@
+﻿@using PhoneDictionary
+@model PhoneBook
+@{
+    Layout = null;
+}
+<tr>
+    <td>@Model.Id</td>
+    <td>@Model.Surname</td>
+    <td>@Model.TelephoneNumber</td>
+    <td><a href="/Dict/Update?idSelectedItem=@Model.Id.ToString()">Edit</a> | <a href="/Dict/Delete?id=@Model.Id.ToString()">Delete</a></td>
+</tr>

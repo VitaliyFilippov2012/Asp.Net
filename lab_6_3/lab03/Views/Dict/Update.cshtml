@@ -1,0 +1,26 @@
+﻿@using PhoneDictionary
+@{
+    Layout = "~/Views/Layout.cshtml";
+    PhoneBook data = ViewBag.PhoneBooks;
+}
+
+@section footer{
+    <footer>
+        This is a footer for update
+    </footer>
+}
+
+@helper InsertUpdateForm(PhoneBook dataItem)
+{
+<form action="/dict/updatesave" method="post">
+    <input type="hidden" name="id" value="@ViewBag.Id" />
+    <input type="text" name="surname" placeholder="name" value="@dataItem.Surname" /><br />
+    <input type="text" name="telephone" placeholder="spec" value="@dataItem.TelephoneNumber" /><br />
+    <input type="submit" />
+</form>
+}
+
+<div>
+    <h3>Update</h3>
+    @InsertUpdateForm(data)
+</div>

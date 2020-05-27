@@ -1,0 +1,23 @@
+﻿
+@{
+    Layout = "~/Views/Layout.cshtml";
+}
+
+@section footer{
+    <footer>
+        This is a footer for index
+    </footer>
+}
+@helper InsertAddForm()
+{
+    <form action="/dict/addsave" method="post">
+        <input type="text" name="surname" placeholder="surname" /><br />
+        <input type="number" name="telephone" placeholder="telephone" /><br />
+        <input type="submit" />
+    </form>
+}
+
+<div>
+    <h3>Add new</h3>
+    @InsertAddForm()
+</div>

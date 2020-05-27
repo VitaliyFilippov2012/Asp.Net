@@ -1,0 +1,18 @@
+﻿
+@using PhoneDictionary
+@{
+    Layout = "~/Views/Layout.cshtml";
+    PhoneBook[] data = ViewBag.PhoneBooks;
+}
+@section footer{
+    <footer>
+        This is a footer for insert
+    </footer>
+}
+<div>
+    <h2>@ViewBag.message</h2>
+    @foreach (var d in data)
+    {
+        <p>@d.Id. @d.Surname @d.TelephoneNumber</p>
+    }
+</div>

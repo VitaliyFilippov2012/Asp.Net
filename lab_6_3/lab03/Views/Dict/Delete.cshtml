@@ -1,0 +1,16 @@
+﻿
+@{
+    Layout = "~/Views/Layout.cshtml";
+    ViewBag.Title = "Delete";
+}
+@section footer{
+    <footer>
+        This is a footer for delete
+    </footer>
+}
+<p>You are trying to delete item @ViewBag.Id, Are you sure?</p>
+<form method="POST" action="/dict/deleteSave">
+    <input type="hidden" name="id" value="@ViewBag.Id" />
+    <input type="submit" value="Yes" />
+</form>
+<a href="/">Main page</a>

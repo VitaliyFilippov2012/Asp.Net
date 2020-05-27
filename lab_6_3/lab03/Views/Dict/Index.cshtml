@@ -1,0 +1,24 @@
+﻿
+@using PhoneDictionary
+@{
+    Layout = "~/Views/Layout.cshtml";
+    List<PhoneBook> data = ViewBag.PhoneBooks;
+}
+
+@section footer{
+    <footer>
+        This is a footer for index
+    </footer>
+}
+
+<div>
+    <h3>@ViewBag.message</h3>
+    <h6>@ViewBag.kek</h6>
+    <table>
+        @foreach (var d in data)
+        {
+            Html.RenderPartial("_DisplayItem", d);
+        }
+    </table>
+    <a href="/dict/add">Add new</a>
+</div>
