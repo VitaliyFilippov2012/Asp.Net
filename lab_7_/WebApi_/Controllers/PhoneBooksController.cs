@@ -1,13 +1,12 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
-using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
+using System.Web.UI.WebControls;
 using WebApi_.Models;
 
 
@@ -58,6 +57,9 @@ namespace WebApi_.Controllers
         [ResponseType(typeof(PhoneBook))]
         public async Task<IHttpActionResult> PostPhoneBook([FromBody]PhoneBook phoneBook)
         {
+            if (phoneBook == null)
+                return StatusCode(HttpStatusCode.BadRequest);
+            phoneBook.Id = Guid.NewGuid();
             _db.Books.Add(phoneBook);
             try
             {
@@ -71,18 +73,16 @@ namespace WebApi_.Controllers
         }
 
         [HttpDelete]
-        [Route("TS")]
+        [Route("TS/{id}")]
         [ResponseType(typeof(PhoneBook))]
-        public async Task<IHttpActionResult> DeletePhoneBook([FromBody]PhoneBook phoneBook)
+        public async Task<IHttpActionResult> DeletePhoneBook(Guid id)
         {
+            var phoneBook = await _db.Books.FirstOrDefaultAsync(x => x.Id == id);
+            if (phoneBook == null)
+                return StatusCode(HttpStatusCode.NotFound);
             try
             {
-                if (phoneBook == null)
-                    return StatusCode(HttpStatusCode.BadRequest);
-                var p = await _db.Books.FirstOrDefaultAsync(x => x.Id == phoneBook.Id);
-                if (p == null)
-                    return StatusCode(HttpStatusCode.NotFound);
-                _db.Books.Remove(p);
+                _db.Books.Remove(phoneBook);
                 await _db.SaveChangesAsync();
             }
             catch (DbUpdateException)
