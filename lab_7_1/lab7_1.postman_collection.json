@@ -1,0 +1,129 @@
+{
+	"info": {
+		"_postman_id": "55a019db-903d-4a40-8b18-43c2f56bcd3b",
+		"name": "lab7_1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get TS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44399",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44399"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get TS Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44399/TS",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44399",
+					"path": [
+						"TS"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post TS",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Id\": \"6c9d4432-d04f-4e10-8b95-d1a72d351076\",\n    \"Surname\": \"lalalal\",\n    \"TelephoneNumber\": \"45645645\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44399/TS",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44399",
+					"path": [
+						"TS"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put TS",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Id\": \"6c9d4432-d02d-4e10-8b95-d1a72d351076\",\n    \"Surname\": \"yxxxxxxxxxxx\",\n    \"TelephoneNumber\": \"228\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44399/TS",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44399",
+					"path": [
+						"TS"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE TS",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Id\": \"6c9d44e2-d02d-4e10-8b98-d1a92d351076\",\n    \"Surname\": \"Fando\",\n    \"TelephoneNumber\": \"456456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44399/TS",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44399",
+					"path": [
+						"TS"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
