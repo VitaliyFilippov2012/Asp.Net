@@ -13,7 +13,7 @@ namespace TaskB2.Controllers
             return Content("AA");
         }
 
-        [Filters.ResultFilter]
+        [ResultFilter]
         public ActionResult AK()
         {
             return Content("AK");

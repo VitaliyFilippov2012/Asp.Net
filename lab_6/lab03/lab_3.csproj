@@ -185,7 +185,6 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Views\Web.config" />
-    <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Dict\Index.cshtml" />
     <Content Include="Views\Dict\Add.cshtml" />
@@ -195,6 +194,7 @@
     <Content Include="Views\Dict\Insert.cshtml" />
     <Content Include="Views\Dict\_DisplayItem.cshtml" />
     <Content Include="Views\Shared\Layout.cshtml" />
+    <Content Include="Views\Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
