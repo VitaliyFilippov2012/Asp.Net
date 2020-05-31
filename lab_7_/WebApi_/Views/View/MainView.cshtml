@@ -18,11 +18,10 @@
 
         #editBlock {
             display: none;
-            float: right;
         }
 
         #createBlock {
-            float: right;
+            margin: 20px;
         }
     </style>
     <script type="text/javascript" src="/Scripts/jquery-3.5.1.min.js"></script>
@@ -71,6 +70,7 @@
                 contentType: "application/json;charset=utf-8",
                 success: function (data) {
                     GetAllPhoneBooks();
+                    Clear();
                 },
                 error: function (x, y, z) {
                     alert(x + '\n' + y + '\n' + z);
@@ -111,12 +111,12 @@
             });
         }
         function WriteResponse(phoneBooks) {
-            var strResult = "<table><th>ID</th><th>Surname</th><th>Phone</th>";
+            var strResult = "<p><h2>Contacts</h2></p><table><th>ID</th><th>Surname</th><th>Phone</th>";
             $.each(phoneBooks, function (index, book) {
                 strResult += "<tr><td>" + book.Id + "</td><td> " + book.Surname + "</td><td>" +
                     book.TelephoneNumber + "</td>" +
-                    "<td><a id='editItem' data-item='" + book.Id + "' onclick='EditItem(this);' >Edit</a></td>" +
-                    "<td><a id='delItem' data-item='" + book.Id + "' onclick='DeleteItem(this);' >Delete</a></td></tr>";
+                    "<td><b><u><a id='editItem' data-item='" + book.Id + "' onclick='EditItem(this);' >Edit</a></u></b></td>" +
+                    "<td><b><u><a id='delItem' data-item='" + book.Id + "' onclick='DeleteItem(this);' >Delete</a></u></b></td></tr>";
             });
             strResult += "</table>";
             $("#tableBlock").html(strResult);
@@ -131,6 +131,11 @@
         function EditItem(el) {
             var id = $(el).attr('data-item');
             GetPhoneBook(id);
+        }
+
+        function Clear() {
+            $("#addSurname").val("");
+            $("#addPhone").val("");
         }
 
         function ShowPhoneBook(phoneBook) {
@@ -163,17 +168,18 @@
 </head>
 <body>
     <div id="tableBlock"></div>
-    <div id="editBlock">
-        <p><b>Edit</b></p>
-        <table>
-            <tr><td><input type="hidden" id="editId" /></td><td></td></tr>
-            <tr><td><label>Surname: </label></td><td><input type="text" id="editSurname" /></td></tr>
-            <tr><td><label>Phone: </label></td><td><input type="number" id="editPhone" /></td></tr>
-        </table>
-        <button id="editBook">Save</button>
-    </div>
+<div id="editBlock">
+    <p><h2>Edit</h2></p>
+    <table>
+        <tr><td><input type="hidden" id="editId" /></td><td></td></tr>
+        <tr><td><label>Surname: </label></td><td><input type="text" id="editSurname" /></td></tr>
+        <tr><td><label>Phone: </label></td><td><input type="number" id="editPhone" /></td></tr>
+    </table>
+    <button id="editBook">Save</button>
+</div>
+<br/>
     <div id="createBlock">
-        <p><b>Add new</b></p>
+        <p><h2>Add new</h2></p>
         <table>
             <tr><td><label>Surname: </label></td><td><input type="text" id="addSurname" /></td></tr>
             <tr><td><label>Phone: </label></td><td><input type="number" id="addPhone" /></td></tr>
