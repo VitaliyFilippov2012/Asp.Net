@@ -1,0 +1,169 @@
+{
+	"info": {
+		"_postman_id": "82fce5ef-d210-4295-ac6d-2ea404ca8eee",
+		"name": "lab7_2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetDict",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/soap+xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<soap12:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\">\r\n  <soap12:Body>\r\n    <GetDict xmlns=\"http://microsoft.com/webservices/\" />\r\n  </soap12:Body>\r\n</soap12:Envelope>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44307/ContactsService.asmx",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44307",
+					"path": [
+						"ContactsService.asmx"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddDict",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/soap+xml",
+						"description": "`",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<soap12:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\">\r\n  <soap12:Body>\r\n    <AddDict xmlns=\"http://microsoft.com/webservices/\">\r\n      <phoneBook>\r\n        <Id>6c9d4432-d05f-4e10-8b95-d1a72d351076</Id>\r\n        <Surname>test</Surname>\r\n        <TelephoneNumber>1111111</TelephoneNumber>\r\n      </phoneBook>\r\n    </AddDict>\r\n  </soap12:Body>\r\n</soap12:Envelope>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44307/ContactsService.asmx",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44307",
+					"path": [
+						"ContactsService.asmx"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdDict",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"description": "`",
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/soap+xml"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<soap12:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\">\r\n  <soap12:Body>\r\n    <UpdDict xmlns=\"http://microsoft.com/webservices/\">\r\n      <phoneBook>\r\n        <Id>6c9d4432-d05f-4e10-8b95-d1a72d351077</Id>\r\n        <Surname>tes76t</Surname>\r\n        <TelephoneNumber>1111111</TelephoneNumber>\r\n      </phoneBook>\r\n    </UpdDict>\r\n  </soap12:Body>\r\n</soap12:Envelope>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44307/ContactsService.asmx",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44307",
+					"path": [
+						"ContactsService.asmx"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DelDict",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"description": "`",
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/soap+xml"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<soap12:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\">\r\n  <soap12:Body>\r\n    <DelDict xmlns=\"http://microsoft.com/webservices/\">\r\n      <phoneBook>\r\n        <Id>6c9d4432-d05f-4e10-8b95-d1a72d351076</Id>\r\n        <Surname>testUpdate</Surname>\r\n        <TelephoneNumber>1111111</TelephoneNumber>\r\n      </phoneBook>\r\n    </DelDict>\r\n  </soap12:Body>\r\n</soap12:Envelope>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44307/ContactsService.asmx",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44307",
+					"path": [
+						"ContactsService.asmx"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
